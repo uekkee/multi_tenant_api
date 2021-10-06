@@ -11,6 +11,6 @@ class TenantedController < ApplicationController
 
   def shard_name
     tenant_id = request.path.match(/\/tenants\/(\d+)\//)[1]
-    :"shard_tenant_#{tenant_id}"
+    Common::TenantDbShard.shard_name tenant_id
   end
 end
