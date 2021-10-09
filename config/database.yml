@@ -28,12 +28,6 @@ development:
   common:
     <<: *default
     database: multi_tenant_api_common_development
-  tenant_1:
-    <<: *default
-    database: multi_tenant_api_tenant_1_development
-  tenant_2:
-    <<: *default
-    database: multi_tenant_api_tenant_2_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.

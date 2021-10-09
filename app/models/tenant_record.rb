@@ -1,5 +1,5 @@
 class TenantRecord < ApplicationRecord
   self.abstract_class = true
 
-  connects_to database: { writing: :tenant_1, reading: :tenant_1 }
+  connects_to shards: Common::TenantDbShard.build_shards_config
 end
